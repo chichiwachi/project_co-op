@@ -1,2 +1,9 @@
-server:  
+server:
   port: 9000
+
+spring:
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      enabled: true
