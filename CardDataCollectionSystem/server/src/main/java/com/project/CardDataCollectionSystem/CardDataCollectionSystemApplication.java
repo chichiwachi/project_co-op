@@ -2,6 +2,7 @@ package com.project.CardDataCollectionSystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import java.util.Collections;
 import java.util.stream.Stream;
 
@@ -19,6 +20,7 @@ import com.project.CardDataCollectionSystem.Repository.TimeRepository;
 import com.project.CardDataCollectionSystem.Repository.LocationRepository;
 
 @SpringBootApplication
+@ComponentScan({"com.project.*"})
 public class CardDataCollectionSystemApplication {
 
 	public static void main(final String[] args) {
