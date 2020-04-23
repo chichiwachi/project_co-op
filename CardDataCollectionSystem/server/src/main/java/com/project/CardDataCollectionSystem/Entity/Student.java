@@ -1,5 +1,8 @@
 // package com.project.CardDataCollectionSystem.Entity;
 
+
+// import org.springframework.web.multipart.MultipartFile;
+
 // import javax.persistence.Column;
 // import javax.persistence.Entity;
 // import javax.persistence.Id;
@@ -21,4 +24,30 @@
 //     private String id;
 
 //     private @NotNull String name;
+
+//     private String DestinationLanguage;
+
+// 	private MultipartFile Image;
+
+// 	public Student(String DestinationLanguage, MultipartFile Image) {
+// 		this.DestinationLanguage = DestinationLanguage;
+// 		this.Image = Image;
+
+// 	}
+
+// 	public String getDestinationLanguage() {
+// 		return DestinationLanguage;
+// 	}
+
+// 	public void setDestinationLanguage(String destinationLanguage) {
+// 		DestinationLanguage = destinationLanguage;
+// 	}
+
+// 	public MultipartFile getImage() {
+// 		return Image;
+// 	}
+
+// 	public void setImage(MultipartFile image) {
+// 		Image = image;
+// 	}
 // }
