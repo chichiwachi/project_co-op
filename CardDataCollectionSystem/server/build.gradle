@@ -1,0 +1,41 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.6.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'sut.coop.B5910557'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-web-services'
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'com.h2database:h2'
+	compile group: 'org.openpnp', name: 'opencv', version: '3.4.2-0'
+	compile group: 'org.bytedeco.javacpp-presets', name: 'tesseract', version: '4.0.0-1.4.4'
+	compile group: 'org.bytedeco.javacpp-presets', name: 'tesseract-platform', version: '4.0.0-1.4.4'
+	compile group: 'org.bytedeco.javacpp-presets', name: 'leptonica', version: '1.77.0-1.4.4'
+	compile group: 'org.bytedeco.javacpp-presets', name: 'leptonica-platform', version: '1.77.0-1.4.4'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
